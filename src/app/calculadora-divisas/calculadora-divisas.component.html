@@ -1,0 +1,16 @@
+<div class="calculadora">
+  <div class="field">
+    <label for="cantidad">Cantidad a convertir en €: </label>
+    <input type="number" id="cantidad" [(ngModel)]="cantidad" name="cantidad" min="0" (input)="convertir()">
+  </div>
+  <div class="field">
+    <label for="divisa" >Divisa a convertir: </label>
+    <select id="divisa" [(ngModel)]="divisa" name="divisa" (change)="convertir()">
+      <option *ngFor="let divisa of divisas" [value]="divisa">{{divisa}}</option>
+    </select>
+  </div>
+  <div class="field">
+    <p>Resultado: {{resultado}} {{divisa}}</p>
+  </div>
+</div>
+

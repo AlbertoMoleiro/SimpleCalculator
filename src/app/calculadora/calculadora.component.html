@@ -1,0 +1,14 @@
+<div class="calculadora">
+  <div class="input-fields">
+    <input type="number" name="num1" [(ngModel)]="num1">
+    <input type="number" name="num2" [(ngModel)]="num2">
+  </div>
+  <div class="btns">
+    <button (click)="sumar()">+</button>
+    <button (click)="restar()">-</button>
+    <button (click)="multiplicar()">x</button>
+    <button (click)="dividir()">/</button>
+  </div>
+
+  <h2>Total: {{total}}</h2>
+</div>
